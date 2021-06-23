@@ -1,0 +1,13 @@
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+thead {
+  color: white;
+  background-color: black;
+}
+
+tr.odd {
+  background-color: lightgray;
+}
