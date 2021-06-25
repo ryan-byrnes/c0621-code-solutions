@@ -14,3 +14,12 @@
 .header {
   text-align: center;
 }
+
+.button {
+  text-align: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
