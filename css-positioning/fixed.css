@@ -8,6 +8,5 @@ html {
 
   /* your code here */
   position: fixed;
-  top: 15%;
-  left: 33%;
+  width: 100%;
 }
