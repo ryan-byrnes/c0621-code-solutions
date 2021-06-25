@@ -4,25 +4,30 @@ body {
 
 .container {
   background-color: rgb(71, 127, 201);
+  margin: 100px;
 }
 
 .row {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-basis: 100%;
+  justify-content: space-evenly;
   align-content: center;
 }
 
-.column-full {
+.col-full {
   flex-basis: 100%;
+  text-align: center;
 }
 
-.column-third {
+.col-third {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 25%;
 }
 
 img {
-  padding: 60px;
+  padding: 35px;
   width: 100%;
 }
 
@@ -35,10 +40,16 @@ h2 {
 }
 
 .image {
-  flex-basis: 30%;
   text-align: center;
+  flex-basis: 25%;
   background-color: white;
   border-radius: 50%;
   margin-left: 50px;
   margin-right: 50px;
+  height: 125px;
+  width: 125px;
+}
+
+h2 {
+  font-size: 2rem;
 }
