@@ -44,3 +44,22 @@ h4 {
 .block-4-button {
   text-align: right;
 }
+
+.col-quarter {
+  flex-basis: 25%;
+}
+
+.col-quarter ul {
+  list-style-type: none;
+  text-align: center;
+  text-align: start;
+}
+
+.row-footer {
+  display: flex;
+}
+
+.container-footer {
+  background-color: rgb(41, 46, 46);
+  color: white;
+}
