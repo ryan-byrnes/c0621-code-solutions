@@ -30,3 +30,17 @@ button {
 .col-full {
   flex-basis: 100%;
 }
+
+.col-full h3,
+.col-full p,
+h4 {
+  text-align: center;
+}
+
+ {
+  text-align: center;
+}
+
+.block-4-button {
+  text-align: right;
+}
