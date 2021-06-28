@@ -1,0 +1,33 @@
+.canvas-nav ul {
+  list-style-type: none;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: inline;
+}
+
+button {
+  display: inline;
+}
+
+.col-half {
+  flex-basis: 50%;
+}
+
+.canvas-nav {
+  text-align: right;
+}
+
+.body-container {
+  display: flex;
+  background-color: lightgray;
+}
+
+.col-full {
+  flex-basis: 100%;
+}
