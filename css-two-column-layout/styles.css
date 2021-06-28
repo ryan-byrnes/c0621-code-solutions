@@ -1,0 +1,70 @@
+.container {
+  margin: 50px;
+}
+
+.row {
+  display: flex;
+}
+
+.col-full {
+  flex-basis: 100%;
+}
+
+.col-half {
+  display: flex;
+  flex-basis: 50%;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.button {
+  text-align: center;
+  flex-basis: 100%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.image {
+  margin-top: 0;
+}
+
+button {
+  color: red;
+  border-color: red;
+  background-color: white;
+  width: 150px;
+  height: 30px;
+}
+
+h1,
+h3,
+button {
+  text-transform: uppercase;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Karla', sans-serif;
+  color: gray;
+}
