@@ -93,6 +93,8 @@ h4 {
 .container-info {
   background-color: rgb(41, 46, 46);
   color: white;
+  height: 300px;
+  padding-top: 35px;
 }
 
 .nav-footer {
@@ -131,4 +133,18 @@ h4 {
 
 .block-4-text {
   padding-left: 50px;
+}
+
+.container-info h2,
+.container-info p {
+  padding-left: 50px;
+}
+
+.info-text {
+  color: white;
+  text-decoration: none;
+}
+
+.col-quarter li {
+  padding-top: 10px;
 }
