@@ -6,6 +6,13 @@
   list-style-type: none;
 }
 
+.canvas-nav li > a {
+  color: rgb(197, 196, 196);
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .row {
   display: flex;
   align-items: center;
@@ -23,8 +30,13 @@ button {
   flex-basis: 50%;
 }
 
+h1 {
+  padding-left: 50px;
+}
+
 .canvas-nav {
   text-align: right;
+  padding-right: 50px;
 }
 
 .body-container,
@@ -39,10 +51,6 @@ button {
 .col-full h3,
 .col-full p,
 h4 {
-  text-align: center;
-}
-
- {
   text-align: center;
 }
 
@@ -75,5 +83,23 @@ h4 {
 }
 
 .hero-image {
-  background-image: linear-gradient (transparent, rgba (0, 0, 0, 0.5)), url ("images/hero.jpg");
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.75)), url("images/hero.jpg");
+  background-size: cover;
+  height: 540px;
+  margin-top: 50px;
+}
+
+.container-image {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.hero-text {
+  padding-right: 50%;
+  padding-left: 60px;
+  padding-top: 8%;
+}
+
+#header-row {
+  border-bottom: 1px solid lightgray;
 }
