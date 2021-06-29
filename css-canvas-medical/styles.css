@@ -6,6 +6,11 @@
   list-style-type: none;
 }
 
+button a {
+  color: white;
+  text-decoration: none;
+}
+
 .canvas-nav li > a {
   color: rgb(197, 196, 196);
   text-decoration: none;
@@ -18,12 +23,19 @@
   align-items: center;
 }
 
+button {
+  display: inline;
+  background-color: rgb(34, 34, 122);
+  border-radius: 4px;
+}
+
 .nav {
   display: inline;
 }
 
-button {
-  display: inline;
+.nav button {
+  width: 85px;
+  height: 35px;
 }
 
 .col-half {
@@ -58,6 +70,12 @@ h4 {
   text-align: right;
 }
 
+.block-4-button button {
+  width: 150px;
+  height: 40px;
+  margin-right: 50px;
+}
+
 .col-quarter {
   flex-basis: 25%;
 }
@@ -83,7 +101,7 @@ h4 {
 }
 
 .hero-image {
-  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.75)), url("images/hero.jpg");
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.65)), url("images/hero.jpg");
   background-size: cover;
   height: 540px;
   margin-top: 50px;
@@ -98,8 +116,19 @@ h4 {
   padding-right: 50%;
   padding-left: 60px;
   padding-top: 8%;
+  color: white;
+}
+
+.hero-text button {
+  width: 160px;
+  height: 40px;
+  margin-top: 10px;
 }
 
 #header-row {
   border-bottom: 1px solid lightgray;
+}
+
+.block-4-text {
+  padding-left: 50px;
 }
