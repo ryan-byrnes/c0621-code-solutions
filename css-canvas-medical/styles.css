@@ -133,10 +133,6 @@ h4 {
   margin-top: 10px;
 }
 
-#header-row {
-  border-bottom: 1px solid lightgray;
-}
-
 .block-4-text {
   padding-left: 50px;
 }
@@ -153,4 +149,9 @@ h4 {
 
 .col-quarter li {
   padding-top: 10px;
+}
+
+.body {
+  padding-left: 250px;
+  padding-right: 250px;
 }
