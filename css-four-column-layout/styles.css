@@ -1,0 +1,19 @@
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.col-full {
+  flex-basis: 100%;
+}
+
+.col-fourth {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+img {
+  width: 50px;
+}
