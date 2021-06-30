@@ -1,5 +1,5 @@
 /* exported getPropertyValue */
 function getPropertyValue(object, key) {
-  var propertyValue = object.key;
-  return propertyValue;
+  var objectHolder = object;
+  return objectHolder.key;
 }
