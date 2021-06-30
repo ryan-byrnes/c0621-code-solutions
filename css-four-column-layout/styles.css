@@ -1,8 +1,17 @@
+.container {
+  padding: 50px;
+  background-color: rgb(247, 248, 250);
+}
+
+h1,
+h3,
+p {
+  font-family: 'Barlow', sans-serif;
+}
+
 .row {
   display: flex;
   justify-content: center;
-  align-items: center;
-  align-content: center;
 }
 
 .col-full {
@@ -15,5 +24,10 @@
 }
 
 img {
-  width: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.second-img > img {
+  width: 90px;
 }
