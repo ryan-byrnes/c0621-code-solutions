@@ -1,3 +1,7 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
 .container {
   padding: 50px;
 }
@@ -24,4 +28,17 @@ img {
   width: 200px;
   height: 400px;
   object-fit: cover;
+}
+
+.color-gray {
+  color: rgb(199, 195, 195);
+}
+
+.color-gray-strikethrough {
+  color: rgb(199, 195, 195);
+  text-decoration-line: line-through;
+}
+
+.color-orange {
+  color: rgb(252, 183, 55);
 }
