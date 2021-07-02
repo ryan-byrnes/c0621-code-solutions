@@ -50,6 +50,7 @@ button {
   display: inline;
   background-color: rgb(41, 68, 100);
   border-radius: 4px;
+  border: none;
 }
 
 .nav {
