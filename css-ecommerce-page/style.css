@@ -40,5 +40,9 @@ img {
 }
 
 .color-orange {
-  color: rgb(252, 183, 55);
+  color: peachpuff;
+}
+
+.peach-border {
+  border: 1px solid peachpuff;
 }
