@@ -43,6 +43,7 @@ img {
   color: peachpuff;
 }
 
-.peach-border {
-  border: 1px solid peachpuff;
+.peach-background {
+  background-color: peachpuff;
+  border-radius: 10%;
 }
