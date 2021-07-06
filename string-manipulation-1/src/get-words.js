@@ -15,6 +15,10 @@ push final characters into array (final word of the array) */
 } */
 
 function getWords(string) {
-  var wordsArray = string.split(' ');
+  if (string.length < 1) {
+    return [];
+  } else {
+    var wordsArray = string.split(' ');
+  }
   return wordsArray;
 }

@@ -5,5 +5,9 @@ store boolean result in a variable
 return variable */
 
 function isVowel(char) {
-  return /[aeiou]/.test(char.toLowerCase());
+  var vowel = false;
+  if (char.toLowerCase() === 'a' || char.toLowerCase() === 'e' || char.toLowerCase() === 'i' || char.toLowerCase() === 'o' || char.toLowerCase() === 'u') {
+    vowel = true;
+  }
+  return vowel;
 }
