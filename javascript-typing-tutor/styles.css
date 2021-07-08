@@ -12,14 +12,15 @@ span {
 }
 
 .current-character {
-  text-decoration: underline;
+  border-bottom: 2px solid black;
 }
 
 .correct-character {
-  color: green;
+  color: rgb(25, 205, 28);
 }
 
 .incorrect-character {
   color: red;
   text-decoration-color: red;
+  border-bottom: 2px solid red;
 }
