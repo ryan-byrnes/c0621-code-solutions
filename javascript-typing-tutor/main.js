@@ -1,11 +1,12 @@
 var character = document.querySelectorAll('span');
+var letter = 0;
 
 document.addEventListener('keydown', function keyPress(e) {
-  for (var i = 0; i < character.length; i++) {
-    if (character[i].textContent === e.key) {
-      character[i].className = 'correct-character';
-    } else {
-      character[i].className = 'current-character incorrect-character';
-    }
+  if (character[letter].textContent === e.key) {
+    character[letter].className = 'correct-character';
+    letter++;
+  } else {
+    character[letter].className = 'current-character incorrect-character';
   }
-});
+}
+);
