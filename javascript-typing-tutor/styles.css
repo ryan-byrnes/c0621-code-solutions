@@ -1,0 +1,25 @@
+span {
+  padding-left: 3px;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: auto;
+  font-family: sans-serif;
+}
+
+.current-character {
+  text-decoration: underline;
+}
+
+.correct-character {
+  color: green;
+}
+
+.incorrect-character {
+  color: red;
+  text-decoration-color: red;
+}
