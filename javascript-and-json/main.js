@@ -24,4 +24,9 @@ console.log('value of JSON string and type:', string, typeof string);
 
 var object = JSON.parse(string);
 
+var stringJSON = '{"name":"Ryan","studentID":23}';
+
+console.log('studentJSON string:', stringJSON);
+console.log('studentJSON type:', typeof stringJSON);
+
 console.log('parse string and type:', object, typeof object);
