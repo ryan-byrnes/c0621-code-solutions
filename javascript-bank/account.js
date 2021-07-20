@@ -10,7 +10,7 @@ Account.prototype.deposit = function (amount) {
   if (amount > 0 && Number.isInteger(amount)) {
     this.transactions.push(new Transaction('deposit', amount));
     return true;
-  } else if (amount <= 0 || isNaN(amount) || !Number.isInteger(amount)) {
+  } else {
     return false;
   }
 };
@@ -19,7 +19,7 @@ Account.prototype.withdraw = function (amount) {
   if (amount > 0 && Number.isInteger(amount)) {
     this.transactions.push(new Transaction('withdrawal', amount));
     return true;
-  } else if (amount <= 0 || isNaN(amount) || !Number.isInteger(amount)) {
+  } else {
     return false;
   }
 };
