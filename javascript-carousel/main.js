@@ -6,7 +6,7 @@ function switchImageTimer() {
   // debugger;
   var image = document.querySelectorAll('img');
   var circle = document.querySelectorAll('.fa-circle');
-  if (counter <= 5 && counter > 0) {
+  if (counter < 6 && counter > 0) {
     for (var i = 0; i < image.length; i++) {
       if (counter === parseInt(image[i].getAttribute('image-view'))) {
         image[i].setAttribute('class', '');
@@ -17,7 +17,7 @@ function switchImageTimer() {
       }
     }
 
-  } else if (counter > 5) {
+  } else if (counter >= 5) {
     image[0].setAttribute('class', '');
     image[image.length - 1].classList.toggle('hidden');
     circle[0].setAttribute('class', 'fas fa-circle padding-left-right');
@@ -64,3 +64,15 @@ function circleClick(event) {
     }
   }
 }
+
+function incrementCounter() {
+  if (counter > 0 || counter <= 5) {
+    counter += 1;
+  } else if (counter === 0) {
+    counter = 5;
+  } else {
+    counter = 1;
+  }
+}
+
+incrementCounter();
