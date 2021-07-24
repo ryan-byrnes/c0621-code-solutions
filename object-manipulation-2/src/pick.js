@@ -4,7 +4,6 @@ if property name matches array key value name, add that property and key to a ne
 return new object */
 
 function pick(source, keys) {
-  // debugger;
   var newObject = {};
   for (var key in source) {
     for (var i = 0; i < keys.length; i++) {
