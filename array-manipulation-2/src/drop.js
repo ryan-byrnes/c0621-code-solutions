@@ -1,5 +1,6 @@
 /* exported drop */
-/* slice array at count and return array */
+/* slice array at count
+ return new array */
 
 function drop(array, count) {
   if (array.length < 1) {
