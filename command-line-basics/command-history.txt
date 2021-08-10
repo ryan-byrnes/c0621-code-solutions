@@ -1,0 +1,90 @@
+    1  exit
+    2  cd repos/c0621-code-solutions/
+    3  git status
+    4  git add es6-arrow-functions
+    5  git status
+    6  git commit -m "Was playing around with arrow functions to see if I could fix the append display, but now everything is as it should be."
+    7  git push origin es6-arrow-functions
+    8  git status
+    9  git switch master
+   10  git status
+   11  cd command-line-basics
+   12  pwd
+   13  man man
+   14  man cat
+   15  cat laziness.txt
+   16  cat impatience.txt
+   17  cat hubris.txt
+   18  cat laziness.txt impatience.txt hubris.txt
+   19  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+   20  cat three-virtues.txt
+   21  man ls
+   22  ls
+   23  ls -a
+   24  ls -F
+   25  ls lfz-staff/
+   26  ls -a lfz-staff/
+   27  ls -F lfz-staff/
+   28  ls -aF lfz-staff > lfz-staff/contents.txt
+   29  cat lfz-staff/contents.txt
+   30  man pwd
+   31  pwd
+   32  pwd > i-was-here.txt
+   33  ls
+   34  cat i-was-here.txt
+   35  man echo
+   36  echo 'Hello, World'
+   37  echo 'Hello, World!' > hello.txt
+   38  ls
+   39  cat hello.txt
+   40  man touch
+   41  touch tag-youre-it.txt
+   42  ls
+   43  touch snoot/boop.txt
+   44  ls
+   45  ls snoot
+   46  man mkdir
+   47  mkdir parent
+   48  ls
+   49  man mkdir
+   50  mkdir -p parent/child/grandchild
+   51  touch parent/child/grandchild.gitkeep
+   52  ls -a
+   53  ls parent/
+   54  ls -a parent/
+   55  ls -a parent/child/grandchild
+   56  ls parent/child/grandchild/
+   57  ls a parent/child/grandchild/
+   58  ls -a parent/child/grandchild/
+   59  man mv
+   60  mv pokimans pokemon
+   61  mv -t pokimans pokemon
+   62  mv -T pokimans pokemon
+   63  mv pokemon pokimans
+   64  man mv
+   65  -T pokemon pokimans
+   66  mv -T pokemon pokimans
+   67  mv -T pokimans pokemon
+   68  mv pokimans
+   69  mv pokimans pokemon
+   70  mv pokimans/ pokemon
+   71  mv pokimans
+   72  mv man
+   73  man mv
+   74  man cat
+   75  man mv
+   76  mv pokiemans pokemon
+   77  man rm
+   78  rm lol.txt
+   79  ls
+   80  man rm
+   81  rm -r kill-me/
+   82  ls
+   83  man cp
+   84  cp and-then.txt no-and-then.txt
+   85  ls
+   86  cat and-then.txt
+   87  cat no-and-then.txt
+   88  man history
+   89  history
+   90  history > command-history.txt
