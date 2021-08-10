@@ -4,15 +4,24 @@ reverse split string
 check to see if the two new arrays are equal */
 
 function isPalindromic(string) {
-  const newArray = string.split('');
-  const newString = newArray.join('');
+
+  let newString = '';
+
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] !== ' ') {
+      newString += string[i];
+    }
+  }
+
+  const newArray = newString.split('');
 
   const reverseArray = newArray.reverse();
+
   const reverseString = reverseArray.join('');
 
-  if (newString === reverseString) {
-    return true;
+  if (newString !== reverseString) {
+    return false;
   }
-  return false;
 
+  return true;
 }
