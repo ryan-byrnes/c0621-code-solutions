@@ -17,15 +17,15 @@ const jokester = {
       }, 2000);
     }, 2000);
   },
-  renderJokePhrase: phrase => {
+  renderJokePhrase: function (phrase) {
     const $phrase = document.createElement('h4');
     $phrase.textContent = phrase;
     $phrase.className = 'fade-in text-center';
     return $phrase;
   },
-  appendJokePhrase: $phrase =>
-    $jokeContainer.append($phrase)
-
+  appendJokePhrase: function ($phrase) {
+    $jokeContainer.append($phrase);
+  }
 };
 
 const flash = {
