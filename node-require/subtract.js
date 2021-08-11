@@ -1,3 +1,3 @@
 const subtract = (x, y) => x - y;
 
-module.exports.subtract = subtract;
+module.exports = subtract;
