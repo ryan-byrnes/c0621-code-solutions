@@ -33,11 +33,12 @@ app.post('/api/notes', (req, res) => {
     req.body.id = data.nextId;
     data.notes[data.nextId] = req.body;
     data.nextId++;
-    updateData();
-    res.status(201).send(req.body);
+    fs.writeFile('./data.json', JSON.stringify(data), 'utf8', err => {
+      if (err) {
+        res.status(500).send('Error: An unexpected error occurred.');
+      } else res.status(201).send(req.body);
 
-  } else {
-    res.status(500).send('Error: An unexpected error occurred.');
+    });
   }
 });
 
@@ -49,15 +50,20 @@ app.delete('/api/notes/:id', (req, res) => {
     res.status(404).send('Id number does not exist');
   } else if (id) {
     delete data.notes[id];
-    updateData();
-    res.sendStatus(204);
-  } else {
-    res.status(500).send('Error: An unexpected error occurred');
+    fs.writeFile('./data.json', JSON.stringify(data), 'utf8', err => {
+      if (err) {
+        console.error('Error: An unexpected error occurred.');
+        res.status(500).send('Error: An unexpected error occurred.');
+      } else res.status(201).send(req.body);
+
+    });
+
   }
 });
 
 app.put('/api/notes/:id', (req, res) => {
   const id = req.params.id;
+  const error = 'Error: An unexpected error occurred.';
   if (id < 1 || isNaN(id)) {
     res.status(400).send('Please enter a valid Id number');
   } else if (!id) {
@@ -65,19 +71,16 @@ app.put('/api/notes/:id', (req, res) => {
   } else if (id) {
     req.body.id = parseInt(id);
     data.notes[id] = req.body;
-    updateData();
-    res.json(data.notes[id]);
-  } else {
-    res.status(500).send('Error: An unexpected error occurred');
+    fs.writeFile('./data.json', JSON.stringify(data), 'utf8', err => {
+      if (err) {
+        res.status(500).send(error);
+      } else res.status(201).send(req.body);
+
+    });
+
   }
 });
 
 app.listen(3000, () => {
 
 });
-
-function updateData() {
-  fs.writeFile('./data.json', JSON.stringify(data), 'utf8', err => {
-    if (err) throw err;
-  });
-}
