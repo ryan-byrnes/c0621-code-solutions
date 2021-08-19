@@ -80,8 +80,57 @@ app.post('/api/grades', (req, res, next) => {
 
 });
 
-app.put('/api/grades/:id', (req, res, next) => {
+app.put('/api/grades/:gradeId', (req, res, next) => {
+  const gradeId = parseInt(req.params.gradeId, 10);
+  if (!Number.isInteger(gradeId) || gradeId <= 0 || !req.body.name || !req.body.course || !req.body.score) {
+    res.status(400).json({ error: 'invalid entry' });
+  } else if (!gradeId) {
+    res.status(404).json({ error: 'grade does not exist' });
+  } else if (gradeId) {
+    const sql = `
+    update "grades"
+       set "name" = $1,
+           "course" = $2,
+           "score" = $3
+     where "gradeId" = $4
+    `;
+    const params = [req.body.name, req.body.course, parseInt(req.body.score, 10), gradeId];
+    db.query(sql, params)
+      .then(result => {
+        res.status(200).json(req.body);
+      })
+      .catch(err => {
+        console.error(err);
+        res.status(500).json({ error: 'An unexpected error occurred.' });
+      });
+  } else {
+    res.status(500).json({ error: 'An unexpected error occurred.' });
+  }
+});
 
+app.delete('/api/grades/:gradeId', (req, res, next) => {
+  const gradeId = parseInt(req.params.gradeId, 10);
+  if (!Number.isInteger(gradeId) || gradeId <= 0) {
+    res.status(400).json({ error: 'invalid entry' });
+  } else if (!gradeId) {
+    res.status(404).json({ error: 'grade does not exist' });
+  } else if (gradeId) {
+    const sql = `
+    delete from "grades"
+      where "gradeId" = $1;
+    `;
+    const params = [gradeId];
+    db.query(sql, params)
+      .then(result => {
+        res.sendStatus(204);
+      })
+      .catch(err => {
+        console.error(err);
+        res.status(500).json({ error: 'An unexpected error occurred.' });
+      });
+  } else {
+    res.status(500).json({ error: 'An unexpected error occurred.' });
+  }
 });
 
 app.listen(3000, () => {
