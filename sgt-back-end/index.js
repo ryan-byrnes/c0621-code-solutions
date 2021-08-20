@@ -53,7 +53,7 @@ app.post('/api/grades', (req, res, next) => {
   const course = req.body.course;
   const score = parseInt(req.body.score, 10);
   if (!name || !course || !score) {
-    res.status(400).json('error: invalid entry');
+    res.status(400).json({ error: 'invalid entry' });
 
   } else if (name) {
     const sql = `
@@ -72,10 +72,6 @@ app.post('/api/grades', (req, res, next) => {
         });
       });
 
-  } else {
-    res.status(500).json({
-      error: 'An unexpected error occurred.'
-    });
   }
 
 });
@@ -84,27 +80,29 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
   const gradeId = parseInt(req.params.gradeId, 10);
   if (!Number.isInteger(gradeId) || gradeId <= 0 || !req.body.name || !req.body.course || !req.body.score) {
     res.status(400).json({ error: 'invalid entry' });
-  } else if (!gradeId) {
-    res.status(404).json({ error: 'grade does not exist' });
-  } else if (gradeId) {
+  } else {
     const sql = `
     update "grades"
        set "name" = $1,
            "course" = $2,
            "score" = $3
      where "gradeId" = $4
+     returning *;
     `;
     const params = [req.body.name, req.body.course, parseInt(req.body.score, 10), gradeId];
     db.query(sql, params)
       .then(result => {
-        res.status(200).json(req.body);
+        const grade = result.rows[0];
+        if (!grade) {
+          res.status(404).json({ error: 'grade does not exist' });
+        } else {
+          res.status(200).json(req.body);
+        }
       })
       .catch(err => {
         console.error(err);
         res.status(500).json({ error: 'An unexpected error occurred.' });
       });
-  } else {
-    res.status(500).json({ error: 'An unexpected error occurred.' });
   }
 });
 
@@ -112,24 +110,26 @@ app.delete('/api/grades/:gradeId', (req, res, next) => {
   const gradeId = parseInt(req.params.gradeId, 10);
   if (!Number.isInteger(gradeId) || gradeId <= 0) {
     res.status(400).json({ error: 'invalid entry' });
-  } else if (!gradeId) {
-    res.status(404).json({ error: 'grade does not exist' });
-  } else if (gradeId) {
+  } else {
     const sql = `
     delete from "grades"
-      where "gradeId" = $1;
+      where "gradeId" = $1
+      returning *;
     `;
     const params = [gradeId];
     db.query(sql, params)
       .then(result => {
-        res.sendStatus(204);
+        const grade = result.rows[0];
+        if (!grade) {
+          res.status(404).json({ error: 'grade does not exist' });
+        } else {
+          res.sendStatus(204);
+        }
       })
       .catch(err => {
         console.error(err);
         res.status(500).json({ error: 'An unexpected error occurred.' });
       });
-  } else {
-    res.status(500).json({ error: 'An unexpected error occurred.' });
   }
 });
 
