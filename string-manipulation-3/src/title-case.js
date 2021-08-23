@@ -7,5 +7,15 @@ return new titlecase string
 */
 
 function titleCase(title) {
+  const minor = ['for', 'and', 'or', 'nor', 'but', 'as', 'by', 'for', 'in'];
+  const words = title.split(' ');
+  const newString = '';
 
+  for (let i = 0; i < words.length; i++) {
+    let word = words[i].toLowerCase();
+
+    if (word === 'javascript') {
+      word = 'JavaScript';
+    }
+  }
 }
