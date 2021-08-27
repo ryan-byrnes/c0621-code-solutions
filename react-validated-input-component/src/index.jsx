@@ -1,4 +1,6 @@
 import React from 'react';
+import Error from './error.jsx';
+import Icon from './icon.jsx';
 import ReactDOM from 'react-dom';
 
 class PasswordInput extends React.Component {
@@ -9,54 +11,31 @@ class PasswordInput extends React.Component {
       value: ''
     };
     this.handleChange = this.handleChange.bind(this);
+
   }
 
   handleChange() {
+    const input = event.target.value;
+    const valid = input.length >= 8;
     this.setState({
-      value: event.target.value
+      value: event.target.value,
+      isValid: valid
     });
   }
 
   render() {
-    if (this.state.value.length < 8 && this.state.value.length > 0) {
-      return (
-        <form>
-          <label>
-            <p>Password</p>
-            <div className="flex">
-              <input type="password" onChange={this.handleChange}></input>
-              <i className="padding-left color-red fas fa-times"></i>
-            </div>
-          </label>
-          <p className="color-red">Your password is too short.</p>
-        </form>
-      );
-    } else if (this.state.value.length === 0) {
-      return (
-        <form>
-          <label>
-            <p>Password</p>
-            <div className="flex">
-              <input type="password" onChange={this.handleChange}></input>
-              <i className="padding-left color-red fas fa-times"></i>
-            </div>
-          </label>
-          <p className="color-red">A password is required.</p>
-        </form>
-      );
-    } else {
-      return (
-        <form>
-          <label>
-            <p>Password</p>
-            <div className="flex">
-              <input type="password" onChange={this.handleChange}></input>
-              <i className="padding-left color-green fas fa-check"></i>
-            </div>
-          </label>
-        </form>
-      );
-    }
+    return (
+      <form>
+        <label>
+          <p>Password</p>
+          <div className="flex">
+            <input type="password" onChange={this.handleChange} value={this.state.value} />
+            <Icon isValid={this.state.isValid} />
+          </div>
+        </label>
+        <Error isValid={this.state.isValid} value={this.state.value} />
+      </form>
+    );
   }
 }
 
