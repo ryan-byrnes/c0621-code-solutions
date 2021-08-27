@@ -23,8 +23,10 @@ class PasswordInput extends React.Component {
         <form>
           <label>
             <p>Password</p>
-            <input type="text" onChange={this.handleChange}></input>
-            <i className="padding-left color-red fas fa-times"></i>
+            <div className="flex">
+              <input type="password" onChange={this.handleChange}></input>
+              <i className="padding-left color-red fas fa-times"></i>
+            </div>
           </label>
           <p className="color-red">Your password is too short.</p>
         </form>
@@ -34,8 +36,10 @@ class PasswordInput extends React.Component {
         <form>
           <label>
             <p>Password</p>
-            <input type="text" onChange={this.handleChange}></input>
-            <i className="padding-left color-red fas fa-times"></i>
+            <div className="flex">
+              <input type="password" onChange={this.handleChange}></input>
+              <i className="padding-left color-red fas fa-times"></i>
+            </div>
           </label>
           <p className="color-red">A password is required.</p>
         </form>
@@ -45,8 +49,10 @@ class PasswordInput extends React.Component {
         <form>
           <label>
             <p>Password</p>
-            <input type="text" onChange={this.handleChange}></input>
-            <i className="padding-left color-green fas fa-check"></i>
+            <div className="flex">
+              <input type="password" onChange={this.handleChange}></input>
+              <i className="padding-left color-green fas fa-check"></i>
+            </div>
           </label>
         </form>
       );
