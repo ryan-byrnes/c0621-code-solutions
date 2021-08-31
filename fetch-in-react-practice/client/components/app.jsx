@@ -62,7 +62,7 @@ export default class App extends React.Component {
 
   toggleCompleted(todoId) {
 
-    const todo = this.state.todos;
+    const todo = this.state.todos.concat();
     const index = todo.findIndex(task => task.todoId === todoId);
     const oppositeStatus = {
       isCompleted: !todo[index].isCompleted
