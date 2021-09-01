@@ -1,6 +1,5 @@
-const jwt = require('jsonwebtoken'); // eslint-disable-line
-const { useReducer } = require('react'); // eslint-disable-line
-const ClientError = require('./client-error'); // eslint-disable-line
+const jwt = require('jsonwebtoken');
+const ClientError = require('./client-error');
 
 function authorizationMiddleware(req, res, next) {
   /* your code here */
