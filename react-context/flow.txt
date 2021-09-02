@@ -2,30 +2,31 @@
 
 When the log in page is rendered, the location hash is set to sign in
 When the user clicks on "Register Now" the hash changes to sign-up
-This triggers a page re-render, which changes the text of the links and buttons to indicate that the user is signing up
+This change of the hash triggers a state change in App triggering a page re-render, which changes the text of the links and buttons to indicate that the user is signing up
 Once the user submits a username and password, a POST request is sent to the server along the path '/api/auth/sign-up'
-If a valid username and password has been sent, the password is hashed, and a db query is sent which inputs the username and password into the 'users' table.
-The server then sends a response back to the client, and the hash is set to sign-in
+If a valid username and password has been sent, the password is hashed, and a db query is sent which inputs a new row for the username and password values sent by the client into the 'users' table.
+The db then returns the result of the query
+The server then sends a response (parsed JSON object) back to the client, and the hash is set to sign-in
 
 2. User can sign in
 
-When the user submits a username and password, a POST request is sent to the server along the /api/auth/sign-in path
-A db query is sent and it looks for and returns the username and hashed password
+When the user submits a username and password, a POST request (body AuthForm.state) is sent to the server along the /api/auth/sign-in path
+A db query is sent and it selects for a userId and hashed password where username = the value submitted in the username input by the user
 if the username is not found, an error is thrown
 The returned hashed password is verified to see if it matches the user inputted password
 If it matches, a token is issued for the user, if not, an error is thrown
-Then the user and token are returned, then App.handleSignIn() is called
+Then the user and token are returned in the response from the server, then App.handleSignIn() is called (on the form submit action) and the token and username are passed as the 'result' argument
 The token is stored in the users local storage and a state change in App.state.user occurs, triggering a re-render
 The hash is set to home
 Since user is no longer 'null', the home page displays Rick Astley
 
 3. User can stay signed in
 
-Since the user's token is stored in local storage, if the page is rerendered, componentDidMount() will be called, and the token will be retrieved from local storage
+Since the user's token is stored in local storage, if the page is rerendered (like if the page is refreshed), componentDidMount() will be called, and the token will be retrieved from local storage
 This ensures the user value will not be 'null', and the home page will feature Rick Astley
 
 4. User can sign out
 
 When the user clicks 'Sign-out' in the nav bar, App.handleSignOut is called and the user's token is removed from local storage
-This changes App.state.user, which triggers App to be rerendered
-Since App.state.user = null, the user will be sent to the sign in page
+Then, App.state.user is changed, which triggers App to be rerendered
+Since App.state.user = null, the user will be sent to the sign in page (hash set to sign-in)
