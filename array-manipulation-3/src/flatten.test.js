@@ -1,4 +1,4 @@
-/* global expect, banMethods, deepFreeze, flatten */
+/* global expect, banMethods, flatten */
 
 describe('flatten(array)', function () {
 
@@ -10,7 +10,7 @@ describe('flatten(array)', function () {
   context('[["foo", "bar"], ["baz", "qux"]]', function () {
 
     it('returns ["foo", "bar", "baz", "qux"]', function () {
-      var input = deepFreeze([['foo', 'bar'], ['baz', 'qux']]);
+      var input = [['foo', 'bar'], ['baz', 'qux']];
       var output = flatten(input);
       expect(output).to.deep.equal(['foo', 'bar', 'baz', 'qux']);
     });
@@ -20,7 +20,7 @@ describe('flatten(array)', function () {
   context('[[1], [2], 3, 4, [5]]', function () {
 
     it('returns [1, 2, 3, 4, 5]', function () {
-      var input = deepFreeze([[1], [2], 3, 4, [5]]);
+      var input = [[1], [2], 3, 4, [5]];
       var output = flatten(input);
       expect(output).to.deep.equal([1, 2, 3, 4, 5]);
     });
@@ -30,7 +30,7 @@ describe('flatten(array)', function () {
   context('[false, [true, [false]], [true]]', function () {
 
     it('returns [false, true, [false], true]', function () {
-      var input = deepFreeze([false, [true, [false]], [true]]);
+      var input = [false, [true, [false]], [true]];
       var output = flatten(input);
       expect(output).to.deep.equal([false, true, [false], true]);
     });
