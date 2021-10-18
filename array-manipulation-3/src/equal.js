@@ -4,7 +4,7 @@ function equal(first, second) {
     return false;
   }
   for (let i = 0; i < first.length; i++) {
-    if (first.indexOf(first[i]) !== second.indexOf(first[i])) {
+    if (first[i] !== second[i]) {
       return false;
     }
   }
