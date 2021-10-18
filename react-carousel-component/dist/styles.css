@@ -1,0 +1,52 @@
+.hidden {
+  display: none;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  width: 500px;
+  height: 500px;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.arrow-button {
+  font-size: 40px;
+  padding: 1rem;
+}
+
+.arrow-button:hover {
+  cursor: pointer;
+}
+
+.left {
+  position: absolute;
+  left: 1rem;
+}
+
+.right {
+  position: absolute;
+  right: 1rem;
+}
+
+.image {
+  height: 75%;
+}
+
+.dots {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  margin: 0.5rem auto;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.dot:hover {
+  cursor: pointer;
+}
