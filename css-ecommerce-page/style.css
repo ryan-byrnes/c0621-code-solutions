@@ -1,0 +1,49 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.container {
+  padding: 50px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-full {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.col-fifth {
+  flex-basis: calc(100% / 5);
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+img {
+  width: 200px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.color-gray {
+  color: rgb(199, 195, 195);
+}
+
+.color-gray-strikethrough {
+  color: rgb(199, 195, 195);
+  text-decoration-line: line-through;
+}
+
+.color-orange {
+  color: peachpuff;
+}
+
+.peach-background {
+  background-color: peachpuff;
+  border-radius: 10%;
+}

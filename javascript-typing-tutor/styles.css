@@ -1,0 +1,26 @@
+span {
+  padding-left: 3px;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: auto;
+  font-family: sans-serif;
+}
+
+.current-character {
+  border-bottom: 2px solid black;
+}
+
+.correct-character {
+  color: rgb(25, 205, 28);
+}
+
+.incorrect-character {
+  color: red;
+  text-decoration-color: red;
+  border-bottom: 2px solid red;
+}

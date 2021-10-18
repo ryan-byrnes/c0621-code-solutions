@@ -1,0 +1,215 @@
+.container {
+  padding: 100px;
+}
+
+h2,
+h3,
+h6,
+p,
+a,
+li {
+  font-family: 'Tiempos Headline', sans-serif;
+}
+
+li {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 12px;
+  color: rgb(141, 141, 141);
+}
+
+.canvas-nav ul {
+  list-style-type: none;
+}
+
+button a {
+  color: rgb(228, 228, 228);
+  text-decoration: none;
+}
+
+.nav-footer a {
+  text-decoration: none;
+  color: rgb(169, 169, 169);
+}
+
+.canvas-nav li > a {
+  color: rgb(197, 196, 196);
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  display: inline;
+  background-color: rgb(41, 68, 100);
+  border-radius: 4px;
+  border: none;
+}
+
+.nav {
+  display: inline;
+}
+
+.nav button {
+  width: 85px;
+  height: 35px;
+}
+
+.col-half {
+  flex-basis: 50%;
+}
+
+img {
+  width: 100%;
+}
+
+.blue-logo {
+  padding-left: 50px;
+  width: 200px;
+}
+
+.canvas-nav {
+  text-align: right;
+  padding-right: 50px;
+}
+
+#header-row {
+  border-bottom: 1px solid rgb(245, 245, 247);
+}
+
+.body-container,
+.container-footer {
+  background-color: rgb(250, 250, 250);
+}
+
+.body-container {
+  margin-top: 30px;
+  height: 400px;
+  padding-top: 60px;
+}
+
+.col-full {
+  flex-basis: 100%;
+}
+
+.col-full h3,
+.col-half h6 {
+  text-align: center;
+}
+
+.block-4-button {
+  text-align: right;
+}
+
+.block-4-button button {
+  width: 150px;
+  height: 40px;
+  margin-right: 50px;
+}
+
+.col-quarter {
+  flex-basis: 25%;
+}
+
+.col-quarter ul {
+  list-style-type: none;
+  text-align: center;
+  text-align: start;
+}
+
+.row-footer {
+  display: flex;
+}
+
+.container-info {
+  background-color: rgb(82, 83, 81);
+  color: white;
+  height: 300px;
+  padding-top: 35px;
+}
+
+.nav-footer {
+  list-style-type: none;
+  display: inline;
+  padding-left: 9px;
+}
+
+.hero-image {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.65)), url("images/hero.jpg");
+  background-size: cover;
+  height: 480px;
+  margin-top: 50px;
+}
+
+.container-image {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.hero-text {
+  padding-right: 50%;
+  padding-left: 60px;
+  padding-top: 5%;
+  color: white;
+  font-weight: lighter;
+}
+
+.hero-text button {
+  width: 160px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.body,
+.block-3-title {
+  color: rgb(141, 141, 141);
+}
+
+.block-4-text {
+  padding-left: 50px;
+}
+
+.block-4-text h3 {
+  color: rgb(110, 110, 110);
+}
+
+.block-4-text p {
+  color: rgb(161, 161, 161);
+}
+
+.container-info h2,
+.container-info p {
+  padding-left: 50px;
+}
+
+.info-text {
+  color: white;
+  text-decoration: none;
+}
+
+.white-logo {
+  padding-left: 50px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  width: 150px;
+}
+
+.col-quarter li {
+  padding-top: 10px;
+}
+
+.body {
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.align-text-center {
+  text-align: center;
+}

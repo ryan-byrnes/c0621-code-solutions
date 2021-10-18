@@ -1,0 +1,29 @@
+.room {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 500px;
+}
+
+.light {
+  background-color: rgb(254, 249, 241);
+}
+
+.lightbulb {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+.lightbulb-on {
+  background-color: yellow;
+}
+
+.dark {
+  background-color: black;
+}
+
+.lightbulb-off {
+  background-color: rgb(43, 43, 43);
+}
