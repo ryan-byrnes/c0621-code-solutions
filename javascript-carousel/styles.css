@@ -24,6 +24,10 @@
   display: block;
 }
 
+.selected {
+  font-weight: 600px;
+}
+
 .padding-right {
   padding-right: 50px;
 }
