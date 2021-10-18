@@ -4,10 +4,10 @@ return new array */
 
 function take(array, count) {
   var newArray = [];
-  if (array.length < 1) {
+  if (!array.length) {
     return array;
   }
-  for (var i = 0; i <= count - 1; i++) {
+  for (var i = 0; i < count; i++) {
     newArray.push(array[i]);
   }
   return newArray;
