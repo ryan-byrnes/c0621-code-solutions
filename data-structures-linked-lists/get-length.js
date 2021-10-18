@@ -1,11 +1,10 @@
 /* exported getLength */
 
 function getLength(list) {
-  let counter = 1;
-  let copy = list;
-  while (copy.next) {
-    counter++;
-    copy = copy.next;
+  let listLength = 1;
+  while (list.next) {
+    list = list.next;
+    listLength++;
   }
-  return counter;
+  return listLength;
 }
